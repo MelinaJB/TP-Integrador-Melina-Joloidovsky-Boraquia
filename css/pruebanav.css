@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.navbar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    z-index: 1;
+}
+
+.navbar input[type="checkbox"] {
+    display: none;
+}
+
+.checkbtn {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar .logo-container {
+    flex: 1;
+    text-align: center;
+}
+
+.navbar .logo {
+    max-height: 50px;
+}
+
+.navbar .enlaces {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .enlaces li {
+    margin: 0 15px;
+}
+
+.navbar .enlaces a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .checkbtn {
+        display: block;
+        color: white;
+    }
+
+    .navbar .logo-container {
+        flex: 1;
+        text-align: center;
+    }
+
+    .navbar .enlaces {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.3s ease;
+    }
+
+    .navbar input[type="checkbox"]:checked ~ .enlaces {
+        left: 0;
+    }
+
+    .navbar .enlaces li {
+        margin: 20px 0;
+    }
+
+    .navbar .enlaces a {
+        color: white;
+        font-size: 18px;
+    }
+
+    .checkbtn i.fa-xmark {
+        display: none;
+    }
+
+    #check:checked ~ .checkbtn i.fa-bars {
+        display: none;
+    }
+
+    #check:checked ~ .checkbtn i.fa-xmark {
+        display: block;
+    }
+}
+
+/* Resto de tu CSS */
