@@ -158,7 +158,7 @@ p {
 
     .enlaces li a:hover {
         text-decoration: underline;
-        color: white;
+        color: white;	
     }
 
     .checkbtn {
@@ -236,11 +236,6 @@ p {
         text-decoration: none;
         color: black;
     }
-    
-    .enlaces li a:hover{
-        text-decoration: underline;
-        color: white;
-    }
 
     #check:checked ~ ul{
         left: 0;
@@ -260,6 +255,10 @@ p {
 
     #check:checked ~ .checkbtn i.fa-xmark {
         display: block;
+    }
+
+    #check:checked ~ body::before {
+        opacity: 80%;
     }
 
     .container {
